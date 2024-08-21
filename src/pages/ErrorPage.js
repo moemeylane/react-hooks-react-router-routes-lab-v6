@@ -1,13 +1,13 @@
-import React from 'react';
+// src/pages/ErrorPage.js
 import NavBar from '../components/NavBar';
 
-const ErrorPage = () => {
+function ErrorPage() {
   return (
     <div>
       <NavBar />
       <h1>Oops! Looks like something went wrong.</h1>
     </div>
   );
-};
+}
 
 export default ErrorPage;

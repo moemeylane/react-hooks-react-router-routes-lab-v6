@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+// src/pages/Actors.js
+import { useEffect, useState } from 'react';
 
-const Actors = () => {
+function Actors() {
   const [actors, setActors] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:4000/actors') 
-      .then(response => response.json())
-      .then(data => setActors(data))
-      .catch(error => console.error('Error fetching actors:', error));
+      .then(res => res.json())
+      .then(data => setActors(data));
   }, []);
 
   return (
@@ -25,6 +25,6 @@ const Actors = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Actors;

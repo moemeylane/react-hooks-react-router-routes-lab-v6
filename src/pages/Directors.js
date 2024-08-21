@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+// src/pages/Directors.js
+import { useEffect, useState } from 'react';
 
-const Directors = () => {
+function Directors() {
   const [directors, setDirectors] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:4000/directors') 
-      .then(response => response.json())
-      .then(data => setDirectors(data))
-      .catch(error => console.error('Error fetching directors:', error));
+      .then(res => res.json())
+      .then(data => setDirectors(data));
   }, []);
 
   return (
@@ -25,6 +25,6 @@ const Directors = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Directors;
