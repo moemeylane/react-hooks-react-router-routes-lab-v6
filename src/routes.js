@@ -3,7 +3,7 @@ import Movie from './pages/Movie';
 import Directors from './pages/Directors';
 import Actors from './pages/Actors';
 import ErrorPage from './pages/ErrorPage';
-import Layout from './components/Layout'; // Ensure this path is correct
+import Layout from './components/Layout';
 
 const routes = [
   {
